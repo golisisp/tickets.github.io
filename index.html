@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Golis ISP APP</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 40px;
+      padding: 20px;
       text-align: center;
       background-color: #f2f2f2;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      line-height: 1.5;
     }
 
     .download-btn {
@@ -20,10 +38,23 @@
       font-size: 18px;
       border-radius: 8px;
       transition: background-color 0.3s ease;
+      margin-top: 20px;
     }
 
     .download-btn:hover {
       background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      .download-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 0;
+      }
     }
   </style>
 </head>
@@ -34,7 +65,6 @@
   <p>NB: ka dib markad dagsato waxaad ka install garaysanaysa meeshaad ku dagsatay badana wuxu gala DOWNLOADS-ka</p>
   <p>Uma baahnid inaad iska saarto kan kugu jira update dheh markad furto.</p>
 
-  <!-- Replace 'yourfile.pdf' with your actual file name -->
   <a href="gispapp-v1.0.5.apk" download class="download-btn">Download APP</a>
 
 </body>
