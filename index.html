@@ -11,38 +11,82 @@
       text-align: center;
       background-color: #f2f2f2;
       margin: 0;
+      display: flex; /* Use flexbox for layout */
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center horizontally */
+      justify-content: center; /* Center vertically */
+      min-height: 100vh; /* Full viewport height */
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 500px; /* Max width for content */
+      width: 90%; /* Responsive width */
+      margin-bottom: 20px; /* Space between sections if multiple */
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 28px;
       margin-bottom: 10px;
+      color: #333;
     }
 
     h4 {
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 15px;
+      color: #555;
+    }
+
+    h6 {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 16px;
       margin: 10px 0;
-      line-height: 1.5;
+      line-height: 1.6;
+      color: #444;
     }
 
     .download-btn {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 14px 28px;
       background-color: #007bff;
       color: white;
       text-decoration: none;
       font-size: 18px;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
-      margin-top: 20px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 25px;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
     }
 
     .download-btn:hover {
       background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .old-version-link { /* Renamed from .normal-link for clarity */
+        display: block; /* Make it a block element to take full width */
+        margin-top: 15px; /* Space above the link */
+        font-size: 16px; /* Slightly larger font for a button-like link */
+        color: #6c757d; /* A more neutral color for old version */
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .old-version-link:hover {
+        color: #495057;
     }
 
     @media (max-width: 600px) {
@@ -50,8 +94,21 @@
         padding: 15px;
       }
 
+      .container {
+        padding: 20px;
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+
       .download-btn {
-        width: 100%;
+        width: 90%; /* Make button full width on small screens */
         font-size: 16px;
         padding: 14px 0;
       }
@@ -60,12 +117,20 @@
 </head>
 <body>
 
-  <h1>Download Golis ISP App Last version</h1>
-  <h4>version: 1.1.5</h4><h6> build: 16</h6>
-  <p>NB: ka dib markad dagsato waxaad ka install garaysanaysa meeshaad ku dagsatay badana wuxu gala DOWNLOADS-ka</p>
-  <p>Uma baahnid inaad iska saarto kan kugu jira update dheh markad furto.</p>
+  <div class="container">
+    <h1>Download Golis ISP App Last version</h1>
+    <h4>version: 1.1.5</h4>
+    <h6>build: 16</h6>
+    <p>NB: ka dib markad dagsato waxaad ka install garaysanaysa meeshaad ku dagsatay badana wuxu gala DOWNLOADS-ka</p>
+    <p>Uma baahnid inaad iska saarto kan kugu jira update dheh markad furto.</p>
 
-  <a href="gispapp-v1.1.5.apk" download class="download-btn">Download APP</a>
+    <a href="gispapp-v1.1.5.apk" download class="download-btn">Download APP</a>
+    
+    <!-- Changed the "Visit Golis ISP Website" link to "Download Old Version" -->
+    <h6 class="old-version-link" style="margin-bottom: 5px;">version 1.1.4</h6>
+    <h6 class="old-version-link" style="margin-top: 0;">build: 15</h6>
+    <a href="gispapp-v1.1.4.apk" download class="old-version-link">Download Old Version</a>
+  </div>
 
 </body>
 </html>
