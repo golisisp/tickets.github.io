@@ -81,7 +81,7 @@
 
     .old-version-link {
         display: block;
-        margin-top: 15px;
+        margin-top: 5px; /* Adjusted margin-top for better spacing with hr */
         font-size: 16px;
         color: #6c757d;
         text-decoration: underline; /* This will only apply to the actual link */
@@ -99,6 +99,13 @@
         margin-top: 5px;
         margin-bottom: 5px;
         text-decoration: none; /* Ensure no underline */
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 30px 0; /* Increased margin for the divider */
+      width: 80%; /* Make the divider slightly narrower than the container */
     }
 
     /* Mobile responsiveness */
@@ -133,6 +140,11 @@
       .old-version-link, .old-version-text { /* Apply responsive font size to both */
         font-size: 15px; /* Adjust font size for old version link/text */
       }
+
+      hr.divider {
+        margin: 20px 0; /* Adjust divider margin for mobile */
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -146,10 +158,10 @@
     <p>Uma baahnid inaad iska saarto kan kugu jira update dheh markad furto.</p>
 
     <a href="gispapp-v1.1.5.apk" download class="download-btn">Download APP</a>
-
-    <hr class="divider">
     
-    <!-- Removed .old-version-link class from h6 tags and added a new class for styling -->
+    <!-- Added a horizontal rule (divider line) above the old version section -->
+    <hr class="divider">
+
     <h6 class="old-version-text" style="margin-bottom: 5px;">version 1.1.4</h6>
     <h6 class="old-version-text" style="margin-top: 0;">build: 15</h6>
     <a href="gispapp-v1.1.4.apk" download class="old-version-link">Download Old Version</a>
