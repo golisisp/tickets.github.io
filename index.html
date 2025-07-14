@@ -155,50 +155,17 @@
   </style>
 </head>
 <body>
-  <body>
+
   <div class="container">
     <h1>Download Golis ISP App Last version</h1>
     <h4>version: 1.1.7</h4>
     <h6>build: 17</h6>
     <p>NB: ka dib markad dagsato waxaad ka install garaysanaysa meeshaad ku dagsatay badana wuxu gala DOWNLOADS-ka</p>
     <p>Uma baahnid inaad iska saarto kan kugu jira update dheh markad furto.</p>
-    <p id="apkSize">Loading size...</p>
 
-    <a href="gispapp-v1.1.7.apk" id="apkLink" download class="download-btn">Download APP</a>
-  </div>
+   <!-- <p class="warning-paragraph">Kan wali lama soo dayn fadlan kan hoose la dag <b><a href="gispapp-v1.1.4.apk" download class="old-version-link">Download Old Version</a></b> ay ku qoran tahay.</p>-->
 
-  <script>
-    const apkUrl = document.getElementById("apkLink").href;
-
-    fetch(apkUrl, { method: "HEAD" })
-      .then(response => {
-        const size = response.headers.get("Content-Length");
-        if (size) {
-          const sizeMB = (size / (1024 * 1024)).toFixed(2);
-          document.getElementById("apkSize").textContent = `File size: ${sizeMB} MB`;
-        } else {
-          document.getElementById("apkSize").textContent = "File size not available.";
-        }
-      })
-      .catch(error => {
-        console.error("Error fetching file size:", error);
-        document.getElementById("apkSize").textContent = "Failed to load size.";
-      });
-  </script>
-</body>
-
-<!--
-  <div class="container">
-    <h1>Download Golis ISP App Last version</h1>
-    <h4>version: 1.1.7</h4>
-    <h6>build: 17</h6>
-    <p>NB: ka dib markad dagsato waxaad ka install garaysanaysa meeshaad ku dagsatay badana wuxu gala DOWNLOADS-ka</p>
-    <p>Uma baahnid inaad iska saarto kan kugu jira update dheh markad furto.</p>
-    <p id="apkSize">Loading size...</p>
-
-    <p class="warning-paragraph">Kan wali lama soo dayn fadlan kan hoose la dag <b><a href="gispapp-v1.1.4.apk" download class="old-version-link">Download Old Version</a></b> ay ku qoran tahay.</p>-- >
-
-    <a href="gispapp-v1.1.7.apk" download class="download-btn">Download APP</a>
+    <a href="gispapp-v1.1.7.apk" download class="download-btn">Go to download</a>
     
     <!-- Added a horizontal rule (divider line) above the old version section
     <hr class="divider">
@@ -206,25 +173,7 @@
     <h6 class="old-version-text" style="margin-top: 0;">build: 17</h6>
     <p>NB: faldan iska saar kan aan test ga ahayn si uu kugu shaqeeyo kan test ga ah.</p>
     <p class="warning-paragraph">Tijaabo <b><a href="https://drive.google.com/uc?export=download&id=1-7vpXOTTjE_kBn4636TqSPOAwPB_JHG8" download class="old-version-link">Download Test</a></p>
-  </div>
+  </div>-->
 
-  <script>
-  const apkUrl = document.getElementById("apkLink").href;
-
-  fetch(apkUrl, { method: "HEAD" }) // use HEAD to avoid downloading the full file
-    .then(response => {
-      const size = response.headers.get("Content-Length");
-      if (size) {
-        const sizeMB = (size / (1024 * 1024)).toFixed(2);
-        document.getElementById("apkSize").textContent = `File size: ${sizeMB} MB`;
-      } else {
-        document.getElementById("apkSize").textContent = "File size not available.";
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching file size:", error);
-      document.getElementById("apkSize").textContent = "Failed to load size.";
-    });
-</script>-->
 </body>
 </html>
