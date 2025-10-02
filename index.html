@@ -1,4 +1,91 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golis ISP APP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h1 { font-size: 28px; margin-bottom: 10px; color: #333; }
+    h4 { font-size: 20px; margin-bottom: 5px; color: #555; }
+    h6 { font-size: 14px; color: #777; margin-bottom: 20px; }
+    p { font-size: 16px; margin: 10px 0; line-height: 1.6; color: #444; }
+
+    .download-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 25px;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    }
+    .download-btn:hover { background-color: #0056b3; transform: translateY(-2px); }
+    .download-btn:active { transform: translateY(0); box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3); }
+
+    @media (max-width: 600px) {
+      .download-btn { width: 100%; font-size: 16px; padding: 14px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Download Golis ISP App Last version</h1>
+    <h4>version: 1.0.3</h4>
+    <h6>build: 2</h6>
+    <p>NB: ka dib markad dagsato waxaad ka install garaysanaysa meeshaad ku dagsatay badana wuxu gala DOWNLOADS-ka</p>
+
+    <!-- First button (shows alert) -->
+    <button id="showAlertBtn" class="download-btn">Go to Download</button>
+
+    <!-- Real download button (hidden at first) -->
+    <a id="realDownloadBtn" href="https://drive.google.com/uc?export=download&id=1hGEVo8NbjuJSiQGPuSxYollU7u8qVqZV"
+       download class="download-btn" style="display:none; margin-top:15px;">
+      Download
+    </a>
+  </div>
+
+  <script>
+    document.getElementById("showAlertBtn").addEventListener("click", function () {
+      alert("Fadlan waxaad iska saarta app kii hore ee kugu jiray si aadan ugu qaldamin!. FG: labada app waa isku mid marka wa inaad kii hore saarto mahadsanid");
+      // Show the real download button
+      document.getElementById("realDownloadBtn").style.display = "inline-block";
+      // Hide the first button
+      this.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -179,4 +266,4 @@
   </div>-->
 
 </body>
-</html>
+</html> -->
